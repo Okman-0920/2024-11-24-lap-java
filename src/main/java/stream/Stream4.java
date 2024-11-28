@@ -27,15 +27,16 @@ public class Stream4 {
         System.out.println(Arrays.toString(numbers));
     }
 
+
     private static void streamVersion() {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         System.out.println("= 원본 numbers(스트림 전) =");
         System.out.println(Arrays.toString(numbers));
 
-        int[] calculatedNumbers = Arrays.stream(numbers) // 새로운 배열이 나온다
+        int[] calculatedNumbers = Arrays.stream(numbers)
                 .map(e -> e * 2)
-                .toArray();
+                .toArray(); // 새로운 배열을 만드는 것이다
 
         System.out.println("= 원본 numbers(스트림 후) =");
         System.out.println(Arrays.toString(numbers));

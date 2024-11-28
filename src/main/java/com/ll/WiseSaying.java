@@ -30,4 +30,10 @@ public class WiseSaying {
     public String setContent(String content) {
         return this.author;
     }
+
+    @Override
+    public String toString() {
+        return "WiseSaying {id=%d, author=\"%s\", content=\"%s\"".formatted(id, author, content);
+    }
+
 }

@@ -69,19 +69,21 @@ public class App {
                 findWiseSaying = wiseSaying;
                 break;
             }
+
+            System.out.print("(기존)작가: %s".formatted(findWiseSaying.getAuthor()));
+            System.out.print("작가: ");
+            String author = scanner.nextLine();
+
+            System.out.print("(기존)명언: %s".formatted(findWiseSaying.getContent()));
+            System.out.print("명언: ");
+            String content = scanner.nextLine();
+
+            findWiseSaying.setAuthor(author);
+            findWiseSaying.setContent(content);
+
+            System.out.println("%d번 명언이 수정되었습니다.".formatted(id));
         }
-        System.out.print("(기존)작가: %s".formatted(findWiseSaying.getAuthor()));
-        System.out.print("작가: ");
-        String author = scanner.nextLine();
 
-        System.out.print("(기존)명언: %s".formatted(findWiseSaying.getContent()));
-        System.out.print("명언: ");
-        String content = scanner.nextLine();
-
-        findWiseSaying.setAuthor(author);
-        findWiseSaying.setContent(content);
-
-        System.out.println("%d번 명언이 수정되었습니다.".formatted(id));
     }
 
     private void actionDelete(int id) {
